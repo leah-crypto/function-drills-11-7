@@ -262,8 +262,9 @@ function bigOrSmall(arr) {
     }
     //arrayEvaluator = answers
   }
+  return(answers);
 }
-
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = [
   "Katniss",
@@ -283,7 +284,18 @@ let loser = "Glimmer";
 */
 
 //CODE HERE
-
+// function eliminator(contestants, loser){
+//   if(contestants.include(loser)){
+//     for(let i = 0; i < contestants.length; i ++){
+//       if(contestants[i] === loser){
+//         contestants.splice(i, 1);
+//         i--;
+//       }
+//     }
+//     return console.log(contestants)
+//   }
+// }
+// eliminator(contestants, loser)
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo.";
 /*
@@ -293,6 +305,11 @@ let sampleString = "Hi, my name is Kylo.";
 
 //CODE HERE
 
+function makeUppercase(str) {
+  console.log(str.toUpperCase());
+}
+
+makeUppercase(sampleString);
 ////////////////// PROBLEM 18 ////////////////////
 /*
   Write a function called emailCheck that takes in
@@ -303,6 +320,14 @@ let sampleString = "Hi, my name is Kylo.";
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+function emailCheck(email) {
+  email = String(email).trim();
+
+  if (email.includes('@')) {
+    return('email verified');
+  } else {
+    return('must provide a valid email address');
+  }
 
 ////////////////// PROBLEM 19 ////////////////////
 /*
@@ -318,7 +343,11 @@ let sampleString = "Hi, my name is Kylo.";
 */
 
 //CODE HERE
+function frogPurchaser(gold) {
+  return gold / 3;
+}
 
+let totalFrogs = frogPurchaser(100);
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9];
 /*
@@ -349,13 +378,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = [];
+let globalScope = ["duck"];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = [];
+let bathroomScope = ["duck", "rubber Duck"];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = [];
+let bathtubScope = ["duck", "rubberDuck", "sailorDuck"];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = [];
+let pondScope = ["duck", "realDuck"];
